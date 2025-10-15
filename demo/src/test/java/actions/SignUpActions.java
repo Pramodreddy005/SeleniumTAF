@@ -1,17 +1,12 @@
 package actions;
 
-import org.apache.commons.io.FileUtils;
+import static utils.JsonUtils.getValueFromJson;
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.OutputType;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
-
 import pages.BasePage;
 import pages.SignUpPage;
 import steps.Hooks;
-import static utils.JsonUtils.getValueFromJson;
-
-import java.io.File;
 
 public class SignUpActions {
     WebDriver driver;
@@ -42,6 +37,4 @@ public class SignUpActions {
         js.executeScript("arguments[0].scrollIntoView(true);", sup.submitButton);
         sup.clickSubmitButton();
     }
-
-
 }
