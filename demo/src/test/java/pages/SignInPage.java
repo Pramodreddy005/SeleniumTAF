@@ -23,6 +23,9 @@ public class SignInPage extends BasePage {
     @FindBy(xpath ="(//*[@id='errormsg'])[2]")
     public WebElement errorMsg;
 
+    @FindBy(xpath = "//a[normalize-space()='SignOut']")
+    public WebElement signOutButton;
+
     public void enterName(String text){
         filltextfields(userName,text);
     }

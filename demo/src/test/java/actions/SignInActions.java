@@ -1,6 +1,7 @@
 package actions;
 
-import static org.junit.Assert.assertEquals;
+import static org.testng.Assert.assertTrue;
+import static utils.JsonUtils.getValueFromJson;
 import java.time.Duration;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
@@ -17,15 +18,16 @@ public class SignInActions {
     this.driver = Hooks.getDriver();
         sp = PageFactory.initElements(driver,SignInPage.class);
         bp = PageFactory.initElements(driver,BasePage.class);
+        
     }
 
     public void checkLoginFunctionality(String testCase) {
         bp.clickSignIn();
-        sp.enterName("admin");
-        sp.enterPassword("password");
+        sp.enterName(getValueFromJson(testCase, "userName"));
+        sp.enterPassword(getValueFromJson(testCase, "password"));
         sp.clickLogin();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-        assertEquals(sp.errorMsg.getText(), "Username or Password is wrong here!!!");
+        assertTrue(sp.signOutButton.isDisplayed());
     
     }
 

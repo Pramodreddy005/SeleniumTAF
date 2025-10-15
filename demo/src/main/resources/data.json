@@ -12,5 +12,11 @@
           "dob": "10/10/2025",
           "address": "2-29/1,RamNagar street, Charlapalli, Hydrabad",
           "securityAnswer": "rajurea"
+    },
+    "signInTest":{
+          "url" : "https://lkmdemoaut.accenture.com/TestMeApp/fetchcat.htm#",
+          "userName": "TamilRockers",
+          "password": "Test12345",
+          "confirmPassword": "Test12345"
     }
 }

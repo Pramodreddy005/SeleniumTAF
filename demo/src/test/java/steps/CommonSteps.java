@@ -46,5 +46,12 @@ public class CommonSteps {
 
     }
 
+    
+    @Then("user tests the SignIn Functionality {string}")
+    public void checkSignInFunctionality(String testCase){
+        signInActions.checkLoginFunctionality(testCase);
+
+    }
+
 
 }
