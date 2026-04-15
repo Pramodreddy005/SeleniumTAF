@@ -1,8 +1,10 @@
-# Selenium Test Automation Framework (BDD + POM)
+# 🚀 Selenium Test Automation Framework (BDD + POM)
 
-A robust and scalable Test Automation Framework built using Selenium, Java, and Cucumber (BDD) following industry best practices like Page Object Model (POM) and layered architecture.
+A robust and scalable **Test Automation Framework** built using **Selenium, Java, and Cucumber (BDD)** following industry best practices like **Page Object Model (POM)** and layered architecture.
 
- 📌 Project Overview
+---
+
+## 📌 Project Overview
 
 This framework demonstrates:
 
@@ -12,17 +14,23 @@ This framework demonstrates:
 - Data-driven testing using JSON
 - Scalable and maintainable automation design
 
- 🧰 Tech Stack
+---
 
-- Automation Tool: Selenium WebDriver  
-- Language: Java  
-- Framework: Cucumber (BDD), TestNG/JUnit  
-- Build Tool: Maven  
-- Design Pattern: Page Object Model (POM)  
-- Data Handling: JSON  
-- Driver: Edge WebDriver  
+## 🧰 Tech Stack
 
- 📂 Project Structure
+- **Automation Tool:** Selenium WebDriver  
+- **Language:** Java  
+- **Framework:** Cucumber (BDD), TestNG/JUnit  
+- **Build Tool:** Maven  
+- **Design Pattern:** Page Object Model (POM)  
+- **Data Handling:** JSON  
+- **Driver:** Edge WebDriver  
+
+---
+
+## 📂 Project Structure
+
+```
 
 SeleniumTAF/
 │── demo/
@@ -63,62 +71,94 @@ SeleniumTAF/
 │
 │── pom.xml
 
+````
 
- ⚙️ Setup & Installation
+---
 
-# 1️⃣ Clone the repository
-bash
+## ⚙️ Setup & Installation
+
+### 1️⃣ Clone the repository
+```bash
 git clone https://github.com/Pramodreddy005/SeleniumTAF.git
 cd SeleniumTAF/demo
-`
+````
 
-# 2️⃣ Install dependencies
+### 2️⃣ Install dependencies
 
-bash
+```bash
 mvn clean install
+```
 
-▶️ Running Tests
+---
 
-# Run all tests
+## ▶️ Running Tests
 
-bash
+### Run all tests
+
+```bash
 mvn test
+```
 
-# Run specific feature
+### Run specific feature
 
-bash
+```bash
 mvn test -Dcucumber.options="src/test/resources/features/SignInTest.feature"
+```
 
+---
 
- ⚡ Key Features
+## 🧪 BDD Sample Scenario
+
+```gherkin
+Feature: Sign In Functionality
+
+  Scenario: Valid Login
+    Given User is on login page
+    When User enters valid credentials
+    Then User should be logged in successfully
+```
+
+---
+
+## ⚡ Key Features
+
 * ✅ BDD framework using Cucumber
 * ✅ Page Object Model (POM) implementation
-* ✅ Action layer for reusable business flows
+* ✅ Action layer for reusable business flows ⭐
 * ✅ Data-driven testing using JSON
 * ✅ Modular and scalable design
 * ✅ Hooks for setup and teardown
 * ✅ Clean separation of concerns
 
+---
 
+## 🔄 Framework Architecture
 
- 🔄 Framework Architecture
- This framework follows a layered design:
-* Feature Files → Define test scenarios (BDD)
-* Step Definitions → Map steps to code
-* Actions Layer → Business logic (reusable flows)
-* Page Layer → UI element interactions
-* Utils Layer → Common utilities (JSON, etc.)
+This framework follows a **layered design**:
 
+* **Feature Files** → Define test scenarios (BDD)
+* **Step Definitions** → Map steps to code
+* **Actions Layer** → Business logic (reusable flows)
+* **Page Layer** → UI element interactions
+* **Utils Layer** → Common utilities (JSON, etc.)
 
- 📈 Future Enhancements
+👉 This ensures maintainability and scalability.
+
+---
+
+## 📈 Future Enhancements
+
 * Integrate Allure Reporting
 * Add parallel execution support
 * Implement cross-browser testing
 * Add CI/CD (Jenkins / GitHub Actions)
 * Dockerize test execution
 
- 👨‍💻 Author
-Pramod Reddy
+---
+
+## 👨‍💻 Author
+
+**Pramod Reddy**
 QA Automation Engineer
 
 * 🔗 GitHub: [https://github.com/Pramodreddy005](https://github.com/Pramodreddy005)
